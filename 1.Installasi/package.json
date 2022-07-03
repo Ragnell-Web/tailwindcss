@@ -1,0 +1,30 @@
+{
+  "name": "latihan-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-tailwind":"npx tailwindcss init",
+    "run-tailwind": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch",
+    "dev": "nodemon app.js",
+    "minify": "npx tailwindcss -o ./public/css/final.css --minify",
+    "start": "npm-run-all --parallel run-tailwind dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.18",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.1.4"
+  },
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3"
+  }
+}
