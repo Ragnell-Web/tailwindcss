@@ -33,3 +33,19 @@ module.exports = {
   <!-- ... -->
 </div>
 ```
+4. Pseudo-Class grouping parent
+- tambahkan class group di parent tag
+- agar child nya bisa dihover
+```
+<div class="group">
+  <h5 class="group-hover:text-white">myCard</h5>
+  <p class="group-hover:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, possimus magni aspernatur enim saepe, itaque provident, deserunt corporis distinctio magnam cumque eveniet! Animi quaerat necessitatibus, non asperiores repudiandae unde expedita!</p>
+</div>
+```
+5. Pseudo-Class grouping sibling
+- tambahkan class peer di sibling tag
+- agar sibling nya bisa control dari sibling yang lain
+```
+<input type="email" id="email" placeholder="Masukkan Email" class="peer">
+<p class="peer-invalid:visible">Email tidak valid</p>
+```

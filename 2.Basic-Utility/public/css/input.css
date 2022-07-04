@@ -1,5 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+#toggle:checked ~ label .toggle-circle {
+  @apply translate-x-3;
+}
 
 /*# sourceMappingURL=input.css.map */
