@@ -49,3 +49,55 @@ module.exports = {
 <input type="email" id="email" placeholder="Masukkan Email" class="peer">
 <p class="peer-invalid:visible">Email tidak valid</p>
 ```
+6. Dark Mode tailwindcss
+- Beri class dark:property di tag yang ingin diubah ke dark mode
+```
+<body class="dark:bg-slate-800 dark:text-slate-200">
+
+</body>
+```
+- atur tailwind.config nya
+```
+module.exports = {
+  content: ["./views/**/*.{ejs,html}", "./public/**/*.js"],
+  darkMode:"class",
+  theme: {
+    extend: {
+      spacing: {
+        "13": "3.5rem",
+      },
+      fontFamily: {
+        inter:['Inter']
+      },
+      colors: {
+        primary: "#bada55",
+        secondary: "#aeaeae",
+      },
+    },
+  },
+  plugins: [],
+}
+```
+- tambahkan class dark di tag html jika ingin ke dark mode
+```
+<html lang="en" class="dark">
+```
+7. Animation tailwindcss
+- buat animation di file tailwind.config.js
+```
+keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+      },
+animation: {
+        spin_slow: "spin 3s linear infinite",
+        wiggle: "wiggle 1s ease-in-out infinite",
+      },
+```
+- jika sudah bisa segera dipakai di html
+```
+<div class="animate-wiggle"></div>
+```
+8. class group tidak bisa digunakan di @layer component
