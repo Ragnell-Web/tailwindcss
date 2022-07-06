@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -8,14 +8,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/output.css">
-<title><%= title %></title>
+  <link rel="stylesheet" href="./css/final.css">
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+  <title><%= title %></title>
 </head>
 
 <body class="dark:bg-slate-800 dark:text-slate-200">
   <%- include('navbar') %>
   <%- body %>
   <%- include('footer') %>
+
+  <!-- back to top start -->
+  <a id="to-top" href="#home" class="h-14 w-14 bg-primary rounded-full fixed z-[9999] bottom-4 right-4 p-4 hidden justify-center items-center hover:animate-pulse">
+    <span class="block h-5 w-5 border-t-2 border-l-2 rotate-45 mt-2">
+    </span>
+  </a>
+  <!-- back to top end -->
   <script src="./js/script-main.js"></script>
 </body>
 
