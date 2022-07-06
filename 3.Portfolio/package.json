@@ -8,7 +8,7 @@
     "build-tailwind": "npx tailwindcss init",
     "run-tailwind": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch",
     "dev": "nodemon app.js",
-    "minify": "npx tailwindcss -o ./public/css/final.css --minify",
+    "minify": "npx tailwindcss -i ./public/css/input.css -o ./public/css/final.css --minify",
     "start": "npm-run-all --parallel scss run-tailwind dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
